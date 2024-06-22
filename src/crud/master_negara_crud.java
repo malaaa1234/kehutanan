@@ -15,6 +15,7 @@ import java.sql.Statement;
  *
  * @author Acer
  */
+//public class adalah enkapsulasi
 public class master_negara_crud {
     private String databaseName = "nurmala_sari_2210010392";
     private String username = "root";
@@ -22,6 +23,8 @@ public class master_negara_crud {
     public static Connection connectionDB;
     
 public master_negara_crud (){
+    //try sama catch blok, untuk menangani pengecualihan, 
+    //exception artinya pengecualian
     try {
         String location = "jdbc:mysql://localhost/" + databaseName;
         Class.forName("com.mysql.jdbc.Driver");
@@ -32,11 +35,11 @@ public master_negara_crud (){
     }
 }
 
-public void simpanmaster_negara(String id_negara, String kode_negara, String nama_negara){
+public void simpanmaster_negara(Integer id_negara, String kode_negara, String nama_negara){
     try {
         String sql = "insert into master_negara (id_negara, kode_negara, nama_negara) value(?,?,?)";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);
-        perintah.setString(1, id_negara);
+        perintah.setInt(1, id_negara);
         perintah.setString(2, kode_negara);
         perintah.setString(3, nama_negara);
         perintah.executeUpdate();
@@ -46,26 +49,26 @@ public void simpanmaster_negara(String id_negara, String kode_negara, String nam
     }
 }
 
-//public void ubahmaster_negara(String id_negara, String kode_negara, String nama_negara){
-//    try {
-//        String sql = "update master_negara set kode_negara = ?, nama_negara = ? where id_negara =?";
-//        PreparedStatement perintah = connectionDB.prepareStatement(sql);
-//        perintah.setString(1, kode_negara);
-//        perintah.setString(2, nama_negara);
-//        perintah.setString(3, id_negara);
-//        perintah.executeUpdate();
-//        System.out.println("Data berhasil diubah");
-//        
-//    } catch (Exception e) {
-//        System.out.println(e.getMessage());
-//    }
-//}
+public void ubahmaster_negara(Integer id_negara, String kode_negara, String nama_negara){
+    try {
+        String sql = "update master_negara set kode_negara = ?, nama_negara = ? where id_negara =?";
+        PreparedStatement perintah = connectionDB.prepareStatement(sql);
+        perintah.setString(1, kode_negara);
+        perintah.setString(2, nama_negara);
+        perintah.setInt(3, id_negara);
+        perintah.executeUpdate();
+        System.out.println("Data berhasil diubah");
+        
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}
 
-public void hapusmaster_negara(String id_negara, String kode_negara, String nama_negara){
+public void hapusmaster_negara(Integer id_negara){
     try {
         String sql = "delete from master_negara where id_negara = ?";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);
-        perintah.setString(1, id_negara);
+        perintah.setInt(1, id_negara);
           
         perintah.executeUpdate();
         System.out.println("deleted");

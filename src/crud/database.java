@@ -32,6 +32,7 @@ public class database {
       }
   }
   
+  //set adalah mutator 
   public void simpanuji(String nik, String nama, String telp, String alamat){
       try {
           String sql = "insert into uji (nik, nama, telp, alamat) value(?, ?, ?, ?)";

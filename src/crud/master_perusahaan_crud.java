@@ -18,6 +18,7 @@ import java.sql.Statement;
  *
  * @author Acer
  */
+//public class enkapsulasi
 public class master_perusahaan_crud {
     private String databaseName = "nurmala_sari_2210010392";
     private String username = "root";
@@ -81,7 +82,7 @@ public void ubahmaster_perusahaan(String id_perusahaan, String nama_perusahaan, 
     }
 }
 
-public void hapusmaster_perusahaan(String id_perusahaan, String nama_perusahaan, String alamat_perusahaan, String provinsi, String telepon, String npwp, String api, String nama_pic, String tlp_pic, String bidang_usaha, String jenis_importir){
+public void hapusmaster_perusahaan(String id_perusahaan){
     try {
         String sql = "delete from master_perusahaan where id_perusahaan = ?";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);

@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
@@ -9,6 +9,7 @@ import crud.database;
 import crud.*;
 import java.sql.Date;
 import java.time.LocalDate;
+import gui.frameUtama;
 //import crud.master_negara_crud;
 //import crud.master_pelabuhan_crud;
 //import crud.master_perusahaan_crud;
@@ -27,13 +28,31 @@ public class Kehutanan {
  */
 
 public static void main(String[] args) { 
-    transaksi_registerb3_crud Connectiondb = new transaksi_registerb3_crud();
-    Date tahun = Date.valueOf("2024-08-26");
+    new frameUtama().setVisible(true);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    transaksi_registerb3_crud Connectiondb = new transaksi_registerb3_crud();
+//    Date tahun = Date.valueOf("2024-08-26");
 //    Connectiondb.simpantransaksi_registerb3("220","33","01",tahun,tahun,tahun,"3","bank mandiri");
 //    Connectiondb.ubahtransaksi_registerb3("220","33","02",tahun,tahun,tahun,"3","bank mandiri");
 //      Connectiondb.hapustransaksi_registerb3("220");
 //      Connectiondb.caritransaksi_registerb3("220");
-        Connectiondb.datatransaksi_registerb3();
+//        Connectiondb.datatransaksi_registerb3();
 
     
     

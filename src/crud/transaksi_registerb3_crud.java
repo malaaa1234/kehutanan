@@ -40,7 +40,7 @@ public transaksi_registerb3_crud(){
     }
 }
 
-public void simpantransaksi_registerb3(String id_register, String id_perusahaan, String no_surat_regis, Date tanggal_berlaku, Date ltr_dtstart, Date ltr_dtend, String ltr_duration, String created_at){
+public void simpantransaksi_registerb3(String id_register, String id_perusahaan, String no_surat_regis, Date tanggal_berlaku, Date ltr_dtstart, Date ltr_dtend, Integer ltr_duration, String created_at){
     try {
         String sql = "insert into transaksi_registerb3 (id_register, id_perusahaan, no_surat_regis, tanggal_berlaku, ltr_dtstart, ltr_dtend, ltr_duration, created_at) value (?,?,?,?,?,?,?,?)";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -50,7 +50,7 @@ public void simpantransaksi_registerb3(String id_register, String id_perusahaan,
         perintah.setDate(4, tanggal_berlaku);
         perintah.setDate(5, ltr_dtstart);
         perintah.setDate(6, ltr_dtend);
-        perintah.setString(7, ltr_duration);
+        perintah.setInt(7, ltr_duration);
         perintah.setString(8, created_at);
         perintah.executeUpdate();
         System.out.println("Data berhasil disimpan");
@@ -59,7 +59,7 @@ public void simpantransaksi_registerb3(String id_register, String id_perusahaan,
     }
 }
 
-public void ubahtransaksi_registerb3(String id_register, String id_perusahaan, String no_surat_regis, Date tanggal_berlaku, Date ltr_dtstart, Date ltr_dtend, String ltr_duration, String created_at){
+public void ubahtransaksi_registerb3(String id_register, String id_perusahaan, String no_surat_regis, Date tanggal_berlaku, Date ltr_dtstart, Date ltr_dtend, Integer ltr_duration, String created_at){
     try {
         String sql = "update transaksi_registerb3 set id_perusahaan = ? , no_surat_regis = ? , tanggal_berlaku = ? , ltr_dtstart = ? , ltr_dtend = ? , ltr_duration = ? , created_at = ? where id_register = ? ";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);
@@ -68,7 +68,7 @@ public void ubahtransaksi_registerb3(String id_register, String id_perusahaan, S
         perintah.setDate(3, tanggal_berlaku);
         perintah.setDate(4, ltr_dtstart);
         perintah.setDate(5, ltr_dtend);
-        perintah.setString(6, ltr_duration);
+        perintah.setInt(6, ltr_duration);
         perintah.setString(7, created_at);
         perintah.setString(8, id_register);
         perintah.executeUpdate();

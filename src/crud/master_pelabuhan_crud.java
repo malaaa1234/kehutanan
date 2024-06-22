@@ -62,7 +62,7 @@ public void ubahmaster_pelabuhan(String id_pelabuhan, String kode_pelabuhan, Str
    }
 }
 
-public void hapusmaster_pelabuhan(String id_pelabuhan, String kode_pelabuhan, String nama_pelabuhan){
+public void hapusmaster_pelabuhan(String id_pelabuhan){
     try {
         String sql = "delete from master_pelabuhan where id_pelabuhan = ?";
         PreparedStatement perintah = connectionDB.prepareStatement(sql);

@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/crud/database.java</file>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/kehutanan/Kehutanan.java</file>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/crud/master_pelabuhan_crud.java</file>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/crud/transaksi_registerb3_crud.java</file>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/crud/master_negara_crud.java</file>
-            <file>file:/C:/Users/Acer/Downloads/kehutanan/src/crud/master_perusahaan_crud.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/kehutanan/src/crud/ujian.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/kehutanan/src/gui/frameUtama.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/kehutanan/src/gui/framedatabase.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/kehutanan/src/gui/frameujian.java</file>
         </group>
     </open-files>
 </project-private>
